@@ -1,0 +1,87 @@
+/* 简洁作品集：短简介、左右目录、图文项目。 */
+:root{font-family:Arial,'Microsoft YaHei','PingFang SC',sans-serif;--bg:#151615;--panel:#1c1d1b;--text:#eeeee8;--muted:#a0a39b;--line:rgba(237,237,225,.14)}
+body{background:var(--bg)}.main-nav>a{font-size:13px}.contact-nav{font-size:12px}
+.concise-section{padding-block:clamp(70px,7vw,116px)}
+.section-index{display:block;color:#92968b;font-size:10px;letter-spacing:2px}
+.section-intro h2{margin-top:22px;font-size:clamp(34px,3.7vw,60px);font-weight:400;letter-spacing:-1.5px;line-height:1.25}
+.section-intro h2>span{color:var(--orange)}
+.underlined-link{display:inline-flex;justify-content:space-between;align-items:center;gap:40px;padding:0 0 11px;border-bottom:1px solid #909383;background:none;color:#e7e7dd;font-size:13px;transition:color .2s,border-color .2s}
+.underlined-link:hover{color:var(--orange);border-color:var(--orange)}
+.quiet-link{display:inline-flex;align-items:center;gap:13px;font-size:12px;color:#b6b9ad}.quiet-link:hover{color:var(--orange)}
+.about{background:#151615;border-top:1px solid var(--line)}
+.about-summary{display:grid;grid-template-columns:.7fr 1.3fr;gap:clamp(50px,8vw,150px)}
+.about-name{margin-top:42px;font-size:20px;letter-spacing:2px}.about-name>span{display:block;font-size:12px;letter-spacing:1px;color:#94998b;margin-top:13px}
+.about-copy{max-width:850px}.about-lead{font-size:clamp(26px,2.4vw,40px);line-height:1.55;letter-spacing:1px;color:#e3e5dc}
+.about-description{font-size:14px;line-height:1.9;color:#a3a89a;margin-top:24px;max-width:680px}
+.essential-facts{margin:30px 0 0;border-top:1px solid var(--line)}
+.essential-facts>div{display:grid;grid-template-columns:55px 1fr;padding-block:15px;border-bottom:1px solid var(--line);font-size:13px;gap:18px;line-height:1.75}
+.essential-facts dt{color:#858d7d}.essential-facts dd{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 18px;margin:0;color:#d5d8ce}
+.essential-facts dd>span{color:#949c8b;font-size:12px}.essential-tools{color:#b4bcaa;font-size:12px;line-height:1.9;margin-top:22px}
+.essential-tools>span{color:#7f8a75;margin-right:20px}.about-actions{display:flex;align-items:center;gap:36px;margin-top:30px}
+/* 目录沿用分类跳转；视觉采用左海报、右编号列表。 */
+.catalogue{background:#1c1d1b;border-block:1px solid var(--line)}
+.contents-layout{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(65px,10vw,170px);align-items:center}
+.contents-cover{min-width:0}.contents-poster{position:relative;height:clamp(330px,31vw,490px);max-width:530px;margin-top:30px}
+.contents-frame{position:absolute;inset:8% 16% 8% 13%;border:1px solid #b88e7266}.contents-frame:after{content:'';position:absolute;bottom:-1px;left:-1px;height:26%;width:32%;border-left:3px solid #dfa580;border-bottom:3px solid #dfa580}
+.contents-ring{position:absolute;width:33%;aspect-ratio:1;border:14px solid #9da993;border-radius:50%;top:0;left:0;opacity:.65}
+.contents-asterisk{position:absolute;bottom:3%;right:3%;color:#daa581;font-size:clamp(68px,8vw,128px);line-height:1;font-family:Arial,sans-serif;font-weight:300}
+.contents-poster h2{position:absolute;inset:0;font:400 clamp(88px,8.7vw,140px)/1 'Songti SC',SimSun,serif;color:#eae8de}
+.contents-poster h2>span:first-child{position:absolute;top:9%;right:4%;display:grid;place-items:center;width:42%;aspect-ratio:1;background:#d4a17e;color:#20211c}
+.contents-poster h2>span:last-child{position:absolute;top:49%;left:20%}
+.contents-cover-note{position:absolute;left:20%;bottom:13%;font-size:8px;line-height:1.8;letter-spacing:2px;color:#9fa392}
+.contents-caption{font-size:12px;letter-spacing:1px;color:#9da38f;margin-top:12px}
+.contents-heading{text-align:right;font-size:clamp(24px,2.2vw,36px);font-weight:400;line-height:1.12;letter-spacing:-1.5px;color:#dadbd3;margin-bottom:30px}.contents-heading>span{color:#808775}
+.contents-list{display:flex;flex-direction:column}
+.contents-link{display:grid;grid-template-columns:42px 1fr 24px;align-items:start;gap:21px;padding:30px 16px;margin-inline:-16px;border-bottom:1px solid #777e682e;transition:background .25s,color .25s}.contents-link:first-child{border-top:1px solid #777e682e}
+.contents-number{font-family:Georgia,'Times New Roman',serif;font-size:28px;line-height:1.4;color:#a6ad9b}
+.contents-link h3{font-family:'Songti SC',SimSun,serif;font-size:clamp(28px,2.6vw,42px);line-height:1.2;font-weight:400;color:#efeee7;transition:color .25s}
+.contents-link ul{display:flex;flex-wrap:wrap;gap:8px 27px;list-style:none;padding:0;margin:19px 0 0;color:#999f91;font-size:13px}
+.contents-link li:before{content:'•';color:#6d7760;margin-right:9px}.contents-arrow{margin-top:8px;color:#a0a78f;transition:transform .25s,color .25s}
+.contents-link:hover,.contents-link:focus-visible{background:#e8b38c08}.contents-link:hover h3,.contents-link:focus-visible h3{color:#e6b491}
+.contents-link:hover .contents-arrow{transform:translate(3px,-3px);color:var(--orange)}
+.contents-hint{margin-top:23px;display:flex;align-items:center;justify-content:flex-end;gap:12px;font-size:10px;color:#8c957e}
+/* 大画面 + 短摘要；详细信息在弹窗中。 */
+.work{background:#151615}
+.work-intro{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:54px}
+.sample-notice{display:inline-flex;align-items:center;gap:8px;font-size:11px;color:#919b85;line-height:1.8}.sample-notice .accent-dot{width:4px;height:4px}
+.selected-projects{display:grid;gap:65px}
+.project-entry{display:grid;grid-template-columns:1.35fr 1fr;align-items:center;gap:clamp(38px,6vw,100px);scroll-margin-top:24px}
+.project-entry--reverse{grid-template-columns:1fr 1.35fr}.project-entry--reverse .project-preview{order:2}.project-entry--reverse .project-summary{order:1}
+.project-preview{display:block;position:relative;width:100%;aspect-ratio:16/10;padding:0;border:1px solid #69715c33;background:#1b1e17;overflow:hidden}
+.project-preview img{height:100%;width:100%;object-fit:contain;transition:transform .5s}.project-preview:hover img{transform:scale(1.015)}
+.preview-label{position:absolute;top:16px;left:16px;font-size:10px;color:#d4d9ca;background:#151a12bd;padding:6px 10px;border:1px solid #c2cbb33d}
+.preview-arrow{position:absolute;bottom:18px;right:18px;display:grid;place-items:center;width:43px;height:43px;background:#20251be6;color:#e3e9da;border:1px solid #c3cfb555;transition:background .25s,color .25s}.project-preview:hover .preview-arrow{background:var(--orange);color:#191d14}
+.project-summary{min-width:0}.project-category{display:flex;align-items:center;gap:12px;color:#b3bcaa;font-size:12px}.project-category>span:first-child{color:#e1b08d;font:15px Georgia,serif}.project-year{margin-left:auto;font-size:10px;color:#86947a}
+.project-summary h3{font-size:clamp(26px,2.7vw,45px);font-weight:400;line-height:1.35;margin-top:24px;letter-spacing:-.5px}
+.project-short-description{margin-top:22px;color:#a5b099;font-size:14px;line-height:1.95;max-width:470px}
+.project-honor{color:#dfaf8a;font-size:12px;line-height:1.8;margin-top:17px}.project-keywords{color:#819475;font-size:11px;line-height:1.8;margin-top:20px}
+.project-summary .underlined-link{margin-top:30px}.work-return{border-top:1px solid var(--line);margin-top:55px;padding-top:24px;text-align:right}
+.contact{background:#1c1e19;border-top:1px solid var(--line);min-height:640px;height:85svh;max-height:900px}
+.contact-inner{padding-top:42px}.contact-main{padding-block:45px}.contact h2{font-size:clamp(45px,5.4vw,88px);line-height:1.25;letter-spacing:-2px}.contact .email-link{font-size:clamp(25px,2.6vw,42px);margin-top:32px}
+.contact-details>button,.contact-details>span{font-size:12px}.contact-details svg{width:15px}.site-footer>span{font-size:10px}
+.project-dialog{background:#1a1c18;border-color:#5a6055}.dialog-image{aspect-ratio:auto;height:clamp(220px,32vw,390px);object-fit:contain;background:#171915}.dialog-description{font-size:14px}.project-details>div{font-size:12px}.material-note{font-size:12px}
+@media(min-width:1800px){
+.about-description,.project-short-description{font-size:16px}.essential-facts>div{font-size:14px;padding-block:18px}.contents-link{padding-block:36px}.contents-link ul{font-size:15px}
+}
+@media(max-width:1100px){
+.about-summary{grid-template-columns:.65fr 1.35fr;gap:40px}.contents-layout{gap:55px}.contents-link{gap:13px;grid-template-columns:35px 1fr 20px}.contents-link ul{gap:8px 17px;font-size:12px}.project-entry{gap:35px}.project-short-description{font-size:13px}
+}
+@media(max-width:760px){
+.concise-section{padding-block:54px}.section-index{font-size:8px;letter-spacing:1.5px}.section-intro h2{font-size:34px;margin-top:16px}
+.about-summary{grid-template-columns:1fr;gap:30px}.about-name{margin-top:20px;font-size:17px;display:flex;align-items:center;gap:18px}.about-name>span{margin-top:0;font-size:10px}
+.about-lead{font-size:25px}.about-description{font-size:13px;margin-top:18px}.essential-facts{margin-top:25px}.essential-facts>div{grid-template-columns:36px 1fr;gap:15px;font-size:12px;padding-block:13px}.essential-facts dd{display:block}.essential-facts dd>span{display:block;font-size:11px;margin-top:3px}
+.essential-tools{font-size:11px}.essential-tools>span{display:block;margin-bottom:5px}.about-actions{gap:30px;margin-top:25px}.underlined-link{font-size:12px;gap:30px}
+.contents-layout{grid-template-columns:1fr;gap:32px}.contents-poster{height:260px;max-width:330px;margin:25px auto 0}.contents-poster h2{font-size:90px}.contents-ring{border-width:10px}.contents-asterisk{font-size:78px}.contents-cover-note{display:none}
+.contents-caption{font-size:10px;margin-top:15px;text-align:center}.contents-heading{font-size:20px;line-height:1.1;margin-bottom:23px;letter-spacing:-.5px}.contents-heading br{display:none}.contents-heading>span{margin-left:7px}
+.contents-link{padding:25px 10px;margin-inline:-10px;grid-template-columns:32px 1fr 20px;gap:12px}.contents-number{font-size:24px}.contents-link h3{font-size:30px}
+.contents-link ul{font-size:11px;gap:8px 13px;margin-top:14px;line-height:1.7}.contents-link li:before{margin-right:6px}.contents-arrow{width:19px}.contents-hint{font-size:9px;margin-top:20px}
+.work-intro{display:block;margin-bottom:30px}.sample-notice{font-size:10px;margin-top:17px}.selected-projects{gap:44px}
+.project-entry,.project-entry--reverse{grid-template-columns:1fr;gap:23px;scroll-margin-top:10px}.project-entry--reverse .project-preview,.project-entry--reverse .project-summary{order:initial}
+.project-preview{aspect-ratio:16/11}.preview-label{font-size:9px;top:12px;left:12px}.preview-arrow{width:35px;height:35px;right:12px;bottom:12px}
+.project-category{font-size:11px;gap:10px}.project-year{font-size:9px}.project-summary h3{font-size:27px;margin-top:16px}.project-short-description{margin-top:14px;font-size:13px}.project-keywords{font-size:10px;margin-top:14px}.project-honor{font-size:11px;margin-top:14px}
+.project-summary .underlined-link{margin-top:21px}.work-return{margin-top:34px;padding-top:22px}
+.contact{min-height:590px;height:85svh;max-height:760px}.contact-inner{padding-top:34px}.contact h2{font-size:42px}.contact .email-link{font-size:25px}.contact-details>button,.contact-details>span{font-size:11px}.site-footer>span{font-size:9px}
+.dialog-description{font-size:13px}.project-details>div{font-size:11px}.material-note{font-size:11px}
+}
+@media(max-width:360px){.contact h2{font-size:36px}.contact .email-link{font-size:22px}}
+@media(prefers-reduced-motion:reduce){.project-preview:hover img{transform:none}}

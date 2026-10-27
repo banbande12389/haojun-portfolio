@@ -1,8 +1,8 @@
 name: Publish portfolio to GitHub Pages
 
 on:
-  release:
-    types: [published]
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -21,20 +21,26 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Download complete website
-        run: |
-          curl --fail --location --retry 3 --output website.zip https://github.com/banbande12389/haojun-portfolio/releases/download/website-v1/website.zip
-          echo 'd0588537681655037d6abe8df779fbb8481bbd3f783a5e1d4c7d8eb6b4edc009  website.zip' | sha256sum --check
-          mkdir dist
-          unzip -q website.zip -d dist
-          test -f dist/index.html
-          test -f dist/media/work-aigc-animation.mp4
+      - name: Checkout website
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - name: Set up Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
+        with:
+          node-version: '24'
+      - name: Install pnpm
+        run: npm install --global pnpm@11.25.0
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Build website
+        run: pnpm run build
+        env:
+          VITE_BASE_PATH: ${{ github.event.repository.name == format('{0}.github.io', github.repository_owner) && '/' || format('/{0}/', github.event.repository.name) }}
       - name: Configure Pages
-        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6
       - name: Upload website
-        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5
         with:
           path: dist
       - name: Deploy website
         id: deployment
-        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5

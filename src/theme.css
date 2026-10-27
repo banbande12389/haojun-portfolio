@@ -1,0 +1,51 @@
+/* 全站浅灰蓝主题：与插画参考背景一致，浅蓝标题搭配灰蓝正文。 */
+:root{color-scheme:light;--bg:#eef1f7;--panel:#e5ecf6;--text:#354b69;--muted:#7c8da6;--accent:#89afe0;--orange:var(--accent);--line:rgba(104,130,168,.19);color:var(--text);background:var(--bg)}
+html,body{background:var(--bg);color:var(--text)}
+::selection{background:#b9d2f3;color:#365679}
+button:focus-visible,a:focus-visible{outline-color:#6d9cd9}
+.skip-link{background:#d8e6f8;color:#355b88}
+.brand-mark{color:#7da5da}.brand-mark>span{color:#b3c9e9}
+.brand-name{color:#587397;border-left-color:#c2cfe1}.brand-name small{color:#8da0bc}
+.main-nav>a{color:#657c9e}.main-nav>a>span{color:#a0b1c9}
+.main-nav>a:hover,.main-nav>a.active{color:#5e8ecb}
+.contact-nav:hover{background:#e2eaf6;border-color:#a3bfe3}
+.mobile-toggle{color:#607d9f}
+.about,.catalogue,.work,.contact{background:var(--bg);border-color:var(--line)}
+.section-index{color:#91a3bd}.section-intro h2{color:#86aadd}
+.about-name{color:#546f95}.about-name>span{color:#8b9db7}
+.about-lead{color:#547298}.about-description{color:#607695}
+.essential-facts,.essential-facts>div{border-color:var(--line)}
+.essential-facts dt{color:#7c8fa9}.essential-facts dd{color:#566f93}.essential-facts dd>span{color:#778ba7}
+.essential-tools{color:#6f84a1}.essential-tools>span{color:#889bb6}
+.underlined-link{color:#627fa5;border-color:#a7bad4}.underlined-link:hover{color:#487fbe;border-color:#7ba5dc}
+.quiet-link{color:#8b9db7}.quiet-link:hover{color:#5f8fc9}
+.contents-frame{border-color:#b2c8e7}.contents-frame:after{border-color:#8baee0}
+.contents-ring{border-color:#b8cceb;opacity:.7}.contents-asterisk{color:#a3bce5}
+.contents-poster h2{color:#8eafe0}.contents-poster h2>span:first-child{background:#dce6f5;color:#799dd0}
+.contents-cover-note,.contents-caption{color:#9baac0}
+.contents-heading{color:#7898c4}.contents-heading>span{color:#b1c4df}
+.contents-link,.contents-link:first-child{border-color:var(--line)}
+.contents-number{color:#9bb0d0}.contents-link h3{color:#6d8fbe}
+.contents-link ul{color:#758ba8}.contents-link li:before{color:#a7bddb}.contents-arrow{color:#91acd0}
+.contents-link:hover,.contents-link:focus-visible{background:#dce6f555}.contents-link:hover h3,.contents-link:focus-visible h3{color:#5c89c3}
+.contents-hint{color:#a1aec2}
+.sample-notice{color:#9aa8bc}.sample-notice .accent-dot{background:#aac2e5}
+.project-preview{background:#e3eaf4;border-color:#c5d3e6}
+.preview-label{background:#f1f6fddd;border-color:#d4e0ef;color:#6c86a9}
+.preview-arrow{background:#f5f8fddd;color:#7e9cc6;border-color:#c5d6ee}.project-preview:hover .preview-arrow{background:#93b6e6;color:#fff}
+.project-category{color:#7c93b3}.project-category>span:first-child{color:#a0b7d9}.project-year{color:#a2b0c5}
+.project-summary h3{color:#6584af}.project-short-description{color:#677f9f}.project-keywords{color:#879bb7}.project-honor{color:#779dcd}
+.work-return{border-color:var(--line)}
+.contact .section-label{color:#91a3bd}.label-slash{color:#bdc9db}
+.contact h2{color:#6586b3}.contact h2 .serif{color:#91b2e0}
+.email-link{color:#7094c3;border-color:#bacce4}.email-link svg{color:#9cb8df}
+.contact-details>button,.contact-details>span{color:#758caa}.contact-details button:hover{color:#648fc8}
+.site-footer{border-color:var(--line)}.footer-name{color:#7b93b7}.footer-name span,.site-footer>span{color:#a0aec3}.back-top{color:#8aa1c1}
+.project-dialog{background:#f1f4fa;color:#546f93;border-color:#becde2;box-shadow:0 20px 80px #5c7ea62e}
+.project-dialog::backdrop{background:#52698577;backdrop-filter:blur(9px)}
+.dialog-image{background:#e6edf7}.dialog-close{background:#f5f8fce8;border-color:#bfd0e8;color:#6e8bb3}.dialog-close:hover{background:#b6ceee;color:#fff}
+.dialog-body h2{color:#6386b4}.dialog-body .eyebrow,.dialog-body .eyebrow>span{color:#93a8c5}
+.award-text,.text-link{color:#7c9fcd}.dialog-description{color:#6c82a0}
+.project-details>div{border-color:#d2ddeb}.project-details dt{color:#99a9c0}.project-details dd{color:#6b83a6}
+.material-note{background:#e5ecf6;color:#8b9db7}.toast{background:#f8fbff;color:#5a7fae;border-color:#bdd1ee;box-shadow:0 8px 24px #829db733}
+@media(max-width:760px){.site-header--editorial .main-nav{background:#f1f5fcf5;border-color:#c8d6eb;box-shadow:0 10px 30px #90aac025}.main-nav>a{color:#607eaa}}
